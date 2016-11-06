@@ -1,6 +1,6 @@
 {
   "name": "vue-material-button",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Simple implementation of material input with no dependencies",
   "author": "sobolevn <mail@sobolevn.me>",
   "private": false,
@@ -89,7 +89,7 @@
     "vue-hot-reload-api": "^2.0.6",
     "vue-html-loader": "^1.2.3",
     "vue-loader": "^9.7.0",
-    "vue-material-ripple": "^0.0.1",
+    "vue-material-ripple": "^1.0.0",
     "vue-router": "^2.0.1",
     "vue-style-loader": "^1.0.0",
     "vueify": "^9.2.4",
