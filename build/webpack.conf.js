@@ -40,7 +40,7 @@ module.exports = {
   },
   vue: {
     loaders: {
-      scss: ExtractTextPlugin.extract(
+      sass: ExtractTextPlugin.extract(
         'vue-style-loader', 'css-loader!sass-loader'
       )
     },

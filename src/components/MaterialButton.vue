@@ -8,7 +8,9 @@
       :type="type"
       :disabled="disabled"
       @click="handleClick">
-        <slot></slot>
+        <span class="material-button-content">
+          <slot></slot>
+        </span>
 
         <MaterialRipple v-if="ripple"></MaterialRipple>
     </button>
@@ -22,17 +24,15 @@
     name: 'material-button',
     computed: {
       computedClasses () {
-        const classes = []
-
-        if (this.raised) {
-          classes.push('material-button--raised')
+        return {
+          'material-button--raised': this.raised,
+          'material-button--large': this.large
         }
-
-        if (this.large) {
-          classes.push('material-button--large')
-        }
-
-        return classes
+      }
+    },
+    methods: {
+      handleClick () {
+        this.$emit('click')
       }
     },
     props: {
@@ -65,25 +65,27 @@
         default: false
       }
     },
-    methods: {
-      handleClick (e) {
-        this.$emit('click', e)
-      }
-    },
     components: {
       MaterialRipple
     }
   }
 </script>
 
-<style lang="scss">
+<style lang="sass">
   @import '~vue-material-ripple/style.css';
+
+  // Variables
+
+  // Sizes
+  $button-height: 36px;
+  $button-height-large: 54px;
+
+  // Fonts
+  $font-size: 16px;
 
   .material-button__component {
     .material-button {
-      color: #fff;
-      background-color: #1B5E20;
-
+      font-size: $font-size;
       text-decoration: none;
       text-align: center;
       letter-spacing: .5px;
@@ -95,10 +97,10 @@
 
       display: inline-block;
       position: relative;
-      height: 36px;
-      line-height: 36px;
+      height: $button-height;
+      line-height: $button-height;
 
-      padding: 0 2rem;
+      padding: 0 2em;
       margin: 0;
       overflow: hidden;
 
@@ -115,19 +117,39 @@
       }
 
       &.material-button--large {
-        height: 54px;
-        line-height: 56px;
+        height: $button-height-large;
+        line-height: $button-height-large;
       }
 
       &:disabled {
-        background-color: #DFDFDF !important;
         box-shadow: none !important;
-        color: #9F9F9F !important;
         cursor: default;
+      }
+    }
+  }
+
+  // Theme:
+
+  // Colors
+  $color-white: #fff;
+  $color-green: #1B5E20;
+  $color-green-light: #217227;
+
+  $color-grey: #9F9F9F;
+  $color-grey-light: #DFDFDF;
+
+  .material-button__component {
+    .material-button {
+      color: $color-white;
+      background-color: $color-green;
+
+      &:disabled {
+        color: $color-grey;
+        background-color: $color-grey-light;
       }
 
       &:hover {
-        background-color: #217227;
+        background-color: $color-green-light;
       }
     }
   }

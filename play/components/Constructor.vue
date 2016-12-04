@@ -1,8 +1,6 @@
 <template>
   <div class="material-button-example">
-    <a href="#">back</a>
     <h1>Button playground</h1>
-    <h2>Check our console for click events</h2>
 
     <div class="material-button-example-playground">
       <div class="material-button-example-playground-form">
@@ -38,18 +36,19 @@
           :ripple="ripple"
           :large="large"
           :disabled="disabled"
+
           @click="handleClick">
-          {{ text }}
+            {{ text }}
         </MaterialButton>
       </div>
   </div>
 </template>
 
 <script>
-  import MaterialButton from '../src/components/MaterialButton.vue'
+  import MaterialButton from '../../src/components/MaterialButton.vue'
 
   export default {
-    name: 'material-button-example',
+    name: 'material-button-constructor',
     data () {
       return {
         raised: true,
@@ -60,8 +59,8 @@
       }
     },
     methods: {
-      handleClick (e) {
-        console.log(e)
+      handleClick () {
+        this.$log('Clicked!')
       }
     },
     components: {
@@ -70,7 +69,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="sass">
   .material-button-example {
     max-width: 350px;
     margin: 0 auto;

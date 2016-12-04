@@ -1,5 +1,15 @@
 # Changelog
 
+## Version 1.1.0
+
+- *breaking* Changed the main file in `package.json`
+- *breaking* Changed the build files location to `dist/` folder
+- *breaking* Changed the component styles
+- Changed the styles language from `scss` to `sass`
+- Updated `peerDependencies` to support `vue@2.1`
+- Added `vue-play` support, removed `vue-dev-derver` (#1)
+- Added test to cover `click` event
+
 ## Version 1.0.0
 
 - Changed `vue-material-ripple` dependency to be ssr-frinedly

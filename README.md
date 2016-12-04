@@ -51,4 +51,4 @@ npm install vue-material-button
 </script>
 ```
 
-For more examples, please check [`/dev`](https://github.com/wemake-services/vue-material-button/tree/master/dev) folder and the [project's website](http://wemake.services/vue-material-button).
+For more examples, please check [`/play`](https://github.com/wemake-services/vue-material-button/tree/master/play) folder and the [project's website](http://wemake.services/vue-material-button).
