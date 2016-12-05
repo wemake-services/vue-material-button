@@ -22,7 +22,10 @@
 </script>
 
 <style lang="sass">
-  .material-button-theme {
+  .material-button-theme { // local class
+
+    // Customizing the button:
+
     .material-button__component {
       .material-button {
         color: white;
@@ -38,8 +41,10 @@
         }
       }
 
-      .ripple__component {
-        background-color: #E57373;
+      // Customizing the ripple:
+
+      .material-ripple__component {
+        background-color: rgba(0, 0, 0, .5);
       }
     }
   }

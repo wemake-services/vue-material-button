@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/wemake-services/vue-material-button.svg?branch=master)](https://travis-ci.org/wemake-services/vue-material-button) [![Coverage Status](https://coveralls.io/repos/github/wemake-services/vue-material-button/badge.svg?branch=master)](https://coveralls.io/github/wemake-services/vue-material-button?branch=master)
 
-Simple implementation of Material Input with no dependencies.
+Simple implementation of Material Button with no dependencies.
 
 ## Installation
 

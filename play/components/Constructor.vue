@@ -20,11 +20,6 @@
         </div>
 
         <div class="material-button-example-playground-field">
-          <label for="large">Large</label>
-          <input type="checkbox" id="large" v-model="large">
-        </div>
-
-        <div class="material-button-example-playground-field">
           <label for="disable">Disabled</label>
           <input type="checkbox" id="disable" v-model="disabled">
         </div>
@@ -34,7 +29,6 @@
         <MaterialButton
           :raised="raised"
           :ripple="ripple"
-          :large="large"
           :disabled="disabled"
 
           @click="handleClick">
@@ -53,7 +47,6 @@
       return {
         raised: true,
         ripple: true,
-        large: false,
         disabled: false,
         text: 'Click'
       }

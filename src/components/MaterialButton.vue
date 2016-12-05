@@ -26,7 +26,8 @@
       computedClasses () {
         return {
           'material-button--raised': this.raised,
-          'material-button--large': this.large
+          'material-button--disabled': this.disabled,
+          'material-button--active': !this.disabled
         }
       }
     },
@@ -59,10 +60,6 @@
       ripple: {
         type: Boolean,
         default: false
-      },
-      large: {
-        type: Boolean,
-        default: false
       }
     },
     components: {
@@ -72,13 +69,12 @@
 </script>
 
 <style lang="sass">
-  @import '~vue-material-ripple/style.css';
+  @import '~vue-material-ripple/dist/style.css';
 
   // Variables
 
   // Sizes
   $button-height: 36px;
-  $button-height-large: 54px;
 
   // Fonts
   $font-size: 16px;
@@ -108,21 +104,19 @@
       -webkit-tap-highlight-color: transparent;
       transition: .2s ease-out;
 
-      &.material-button--raised {
-        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+      // States:
 
-        &:hover {
-          box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
+      &.material-button--active {
+        &.material-button--raised {
+          box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+
+          &:hover {
+            box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
+          }
         }
       }
 
-      &.material-button--large {
-        height: $button-height-large;
-        line-height: $button-height-large;
-      }
-
-      &:disabled {
-        box-shadow: none !important;
+      &.material-button--disabled {
         cursor: default;
       }
     }
@@ -143,12 +137,12 @@
       color: $color-white;
       background-color: $color-green;
 
-      &:disabled {
+      &.material-button--disabled {
         color: $color-grey;
         background-color: $color-grey-light;
       }
 
-      &:hover {
+      &.material-button--active:hover {
         background-color: $color-green-light;
       }
     }

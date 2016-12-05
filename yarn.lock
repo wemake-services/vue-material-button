@@ -6232,8 +6232,8 @@ vue-loader@^9.8.1:
     vue-template-es2015-compiler "^1.2.2"
 
 vue-material-ripple:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/vue-material-ripple/-/vue-material-ripple-1.0.0.tgz#bc359258de2d0843710679b9091657d96a442dfc"
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/vue-material-ripple/-/vue-material-ripple-1.1.0.tgz#995ff5af228f750f81f8c8b88205ef6ffde5cb4e"
 
 vue-play:
   version "2.1.1"

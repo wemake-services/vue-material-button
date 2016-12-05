@@ -103,9 +103,7 @@ $RECYCLE.BIN/
 test/unit/coverage
 
 # Built files:
-/index.js
-/style.css
+/dist
 
-# vue-dev-server
-dev/index.js
-docs/
+# vue-play
+dist-play/

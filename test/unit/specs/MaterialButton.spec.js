@@ -11,19 +11,24 @@ describe('MaterialButton.vue', () => {
   // Computed classes
 
   it('rendes correct default classes', () => {
-    expect(component.$el.querySelector('button').className)
-      .to.equal('material-button')
+    expect(component.computedClasses).to.deep.equal({
+      'material-button--raised': false,
+      'material-button--disabled': false,
+      'material-button--active': true
+    })
   })
 
   it('renders correct full classes', () => {
     const inst = getComponent(MaterialButton, {
       raised: true,
-      large: true
+      disabled: true
     })
-    const button = inst.$el.querySelector('button')
 
-    expect(button.className).to.equal(
-      'material-button material-button--raised material-button--large')
+    expect(inst.computedClasses).to.deep.equal({
+      'material-button--raised': true,
+      'material-button--disabled': true,
+      'material-button--active': false
+    })
   })
 
   // Events
